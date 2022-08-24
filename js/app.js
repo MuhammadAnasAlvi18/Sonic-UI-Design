@@ -4,37 +4,32 @@ let loader = document.querySelector(".loader");
 
 AOS.init();
 
-function showNav(){
+const showNav = () => {
     nav.classList.add("active");
 }
-function closeNav(){
+const closeNav = () => {
     nav.classList.remove("active")
 }
 
-function showSearch(){
+const showSearch = () => {
     search.classList.add("active");
 }
 
-function closeSearch(){
+const closeSearch = () => {
     search.classList.remove("active");
 }
 
-var typed = new Typed('#typed', {
+let typed = new Typed('#typed', {
     stringsElement: '#typed-strings',
-    typeSpeed : 200,
+    typeSpeed: 200,
     backSpeed: 100,
     loop: true,
     loopCount: Infinity,
-  });
+});
 
 
 
 
-// window.addEventListener("load" , ()=>{
-//     loader.style.display = "none";
-// })
-
-
-window.addEventListener("load" , setTimeout(()=>{
+window.addEventListener("load", setTimeout(() => {
     loader.style.display = "none";
-},1000))
+}, 1000))
